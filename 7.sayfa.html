@@ -10,7 +10,7 @@
     <center>
     <div class="container">
         <h2>Ödeme Yap</h2>
-        <form action="9.sayfa.html" method="post">
+        <form id="paymentForm">
             <div class="form-group">
                 <label for="name">Ad Soyad</label>
                 <input type="text" id="name" name="name" required>
@@ -30,7 +30,23 @@
             <button type="submit" class="button">Ödeme Yap</button>
         </form>
     </div>
-</center>
+    </center>
+
+    <script>
+        document.getElementById("paymentForm").addEventListener("submit", function(e){
+            e.preventDefault(); // normal form postunu durdur
+
+            // input değerlerini al
+            const name = document.getElementById("name").value;
+            const cardNumber = document.getElementById("card-number").value;
+            const expiryDate = document.getElementById("expiry-date").value;
+            const cvv = document.getElementById("cvv").value;
+
+            // URL parametreleriyle sayfaya yönlendir
+            window.location.href = `9.sayfa.html?name=${encodeURIComponent(name)}&card-number=${encodeURIComponent(cardNumber)}&expiry-date=${encodeURIComponent(expiryDate)}&cvv=${encodeURIComponent(cvv)}`;
+        });
+    </script>
+
 </body>
 <br>
 <hr>
