@@ -1,0 +1,130 @@
+body {
+  font-family: Arial, sans-serif;      /* Sayfadaki yazı tipini Arial yapar, yoksa sans-serif kullanır */
+  line-height: 1.6;                    /* Satırlar arası boşluk (1.6 katı) */
+  margin: 0;                           /* Sayfanın dış boşluğunu sıfırlar */
+  padding: 40px;                       /* İç boşluk – içerik kenarlardan 40px uzakta başlar */
+  background-color: #f4f4f4;           /* Arka plan açık gri */
+  color: #333;                         /* Metin rengi koyu gri */
+}
+
+header {
+  background-color: #0077cc;           /* Mavi arka plan */
+  padding: 20px;                       /* İç boşluk */
+  color: white;                        /* Yazı rengi beyaz */
+  text-align: center;                  /* Yazıyı ortalar */
+}
+
+nav {
+  background-color: #005fa3;           /* Daha koyu mavi */
+  display: flex;                       /* Flexbox düzeni */
+  justify-content: center;             /* Ortaya hizala */
+  padding: 10px 0;                     /* Üst-alt 10px boşluk */
+}
+
+nav a {
+  color: white;                        /* Yazı rengi beyaz */
+  text-decoration: none;               /* Alt çizgi yok */
+  margin: 0 15px;                      /* Sağ-sol boşluk */
+  font-weight: bold;                   /* Kalın yazı */
+}
+
+nav a:hover {
+  text-decoration: underline;          /* Üzerine gelince altı çizilir */
+}
+
+main {
+  padding: 20px;                       /* İç boşluk */
+}
+
+footer {
+  background-color: #eee;              /* Açık gri arka plan */
+  text-align: center;                  /* Ortalanmış yazı */
+  padding: 10px;
+  color: #666;                         /* Açık gri yazı */
+  width: 100%;
+  bottom: 0;
+}
+
+.blog-post {
+  background-color: #ffffff;           /* Beyaz kutu */
+  padding: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 10px;                 /* Kenarları yuvarlat */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+}
+
+.news-section {
+  display: flex;                       /* Dikey düzen */
+  flex-direction: column;
+  gap: 30px;                           /* Kartlar arası boşluk */
+  padding: 40px;
+}
+
+.news-card {
+  display: flex;                       /* Yatay içerik dizimi */
+  gap: 20px;
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  align-items: center;                /* Dikey ortalama */
+}
+
+.news-card img {
+  width: 200px;                       /* Sabit genişlik */
+  height: auto;                       /* Oranı bozmadan yükseklik */
+  border-radius: 8px;                 /* Kenarları yuvarlat */
+  object-fit: cover;                  /* Taşmadan kırpar */
+}
+
+.news-card a {
+  text-decoration: none;
+  color: inherit;                     /* Ebeveynin rengini alır */
+}
+.news-card a:hover {
+  text-decoration: underline;
+  color: #0066cc;
+}
+
+a {
+  text-decoration: none;
+  color: #871414;                     /* Koyu bordo rengi */
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;                   /* Yalnızca yukarı-aşağı boyutlandırma */
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4caf50;          /* Yeşil buton */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;          /* Hover’da daha koyu yeşil */
+}
+
+.feedback-box {
+  margin-top: 20px;
+  padding: 15px;
+  border-left: 4px solid #4caf50;     /* Sola yeşil şerit */
+  background-color: #f9f9f9;
+}
+
