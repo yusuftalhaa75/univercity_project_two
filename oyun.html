@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Oyun</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="resimler/YtK.png" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <h1>Oyun</h1>
+    <nav>
+      <a href="index.html">Ana Sayfa</a>
+      <a href="hakkimda.html">Hakkımda</a>
+      <a href="projeler.html">Projeler</a>
+      <a href="hobiler.html">Hobiler</a>
+      <a href="blog.html">Blog</a>
+      <a href="haberler.html">Haberler</a>
+      <a href="iletisim.html">İletişim</a>
+      <a href="sss.html">SSS</a>
+      <a href="oyun.html">Oyun</a>
+    </nav>
+  </header>
+  <div id="dice-game" style="text-align: center; margin-top: 20px;">
+  <h3>Zar Atma Oyunu 🎲</h3>
+  <img id="dice-img" src="resimler/Alea_1.png" alt="Zar" width="100">
+  <p id="dice-result">Sonuç: 1</p>
+  <button onclick="rollDice()" style="padding: 10px 20px; font-size: 16px;">Zarı At</button>
+</div>
+
+<script>
+  function rollDice() {
+    const dice = Math.floor(Math.random() * 6) + 1;
+    const diceImg = document.getElementById("dice-img");
+    const result = document.getElementById("dice-result");
+
+    // Zar görselleri (1-6)
+    const diceFaces = {
+      1: "resimler/Alea_1.png",
+      2: "resimler/Alea_2.png",
+      3: "resimler/Alea_3.png",
+      4: "resimler/Alea_4.png",
+      5: "resimler/Alea_5.png",
+      6: "resimler/Alea_6.png",
+    };
+
+    diceImg.src = diceFaces[dice];
+    result.textContent = `Sonuç: ${dice}`;
+  }
+</script>
+<br>
+<br>
+
+<footer>
+    <p>© 2025 Yusuf Talha Kotan Tüm Hakları Saklıdır.</p>
+  </footer>
+
+
+</html>
